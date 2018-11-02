@@ -1,7 +1,6 @@
 spring:
   application:
     name: zuul
-
 zuul:
   routes:
     location:
@@ -12,11 +11,9 @@ zuul:
       path: /**
     batch:
       path: /**
-
 eureka:
   client:
     service-url:
       default-zone: ${EUREKA_HOME}
-
 server:
   port: 9090
