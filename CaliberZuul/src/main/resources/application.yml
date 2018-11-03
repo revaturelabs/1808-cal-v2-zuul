@@ -4,13 +4,13 @@ spring:
 zuul:
   routes:
     location:
-      path: /**
+      path: /**/location/**
     skill:
-      path: /**
+      path: /**/skill/**
     user:
-      path: /**
+      path: /**/trainee/**
     batch:
-      path: /**
+      path: /**/batch/**
 eureka:
   client:
     service-url:
