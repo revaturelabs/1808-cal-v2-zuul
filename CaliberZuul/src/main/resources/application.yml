@@ -7,8 +7,12 @@ zuul:
       path: /**/location/**
     skill:
       path: /**/skill/**
-    user:
+    user-trainee:
       path: /**/trainee/**
+      service-id: user_service
+    user-trainer:
+      path: /**/trainer/**
+      service-id: user_service
     batch:
       path: /**/batch/**
 eureka:
