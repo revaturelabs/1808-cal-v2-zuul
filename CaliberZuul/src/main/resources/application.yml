@@ -14,12 +14,12 @@ zuul:
     user-trainer:
       path: /**/trainer/**
       service-id: user-service
-    batch:
-      path: /**/batch/**
-      service-id: batch
     assessment:
       path: /**/assessment/**
       service-id: assessment-service
+    batch:
+      path: /**/batch/**
+      service-id: batch-service
     grade:
       path: /**/grade/**
       service-id: assessment-service
