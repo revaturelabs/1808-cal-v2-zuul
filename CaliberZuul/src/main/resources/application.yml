@@ -1,6 +1,7 @@
 spring:
   application:
     name: zuul
+
 zuul:
   routes:
     location:
@@ -9,15 +10,30 @@ zuul:
       path: /**/skill/**
     user-trainee:
       path: /**/trainee/**
-      service-id: user_service
+      service-id: user-service
     user-trainer:
       path: /**/trainer/**
-      service-id: user_service
+      service-id: user-service
     batch:
       path: /**/batch/**
+      service-id: batch
+    assessment:
+      path: /**/assessment/**
+      service-id: assessment-service
+    grade:
+      path: /**/grade/**
+      service-id: assessment-service
+    note:
+      path: /**/note/**
+      service-id: assessment-service
+    category:
+      path: /**/category/**
+      service-id: category-service
+
 eureka:
   client:
     service-url:
       default-zone: ${EUREKA_HOME}
+
 server:
   port: 9090
