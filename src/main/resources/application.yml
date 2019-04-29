@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: zuul
+
+zuul:
+  routes:
+    user-trainee:
+      path: /**/trainee/**
+      service-id: user-service
+    user-trainer:
+      path: /**/trainer/**
+      service-id: user-service
+    grade:
+      path: /**/grade/**
+      service-id: assessment-service
+    assessment:
+      path: /**/assessment/**
+      service-id: assessment-service
+    note:
+      path: /**/note/**
+      service-id: assessment-service
+    batch:
+      path: /**/batch/**
+      service-id: batch-service
+    category:
+      path: /**/category/**
+      service-id: category-service
+    location:
+      path: /**/location/**
+    skill:
+      path: /**/skill/**
+eureka:
+  client:
+    service-url:
+      default-zone: http://54.147.136.238:32861/ 
+
+server:
+  port: 10000 
