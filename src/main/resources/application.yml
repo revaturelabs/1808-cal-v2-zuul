@@ -32,7 +32,7 @@ zuul:
 eureka:
   client:
     service-url:
-      default-zone: ${EUREKA_HOME}
+      default-zone: http://54.147.136.238:32861/ 
 
 server:
-  port: 9090
+  port: 10000 
