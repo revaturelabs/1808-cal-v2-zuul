@@ -31,4 +31,4 @@ eureka:
       default-zone: http://54.147.136.238:32861/ 
 
 server:
-  port: 10000 
+  port: 10000
