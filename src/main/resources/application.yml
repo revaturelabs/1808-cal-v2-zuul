@@ -4,6 +4,9 @@ spring:
 
 zuul:
   routes:
+    quality-audit:
+      path: /qa/**
+      service-id: quality-audit-service
     user-trainee:
       path: /**/trainee/**
       service-id: user-service
