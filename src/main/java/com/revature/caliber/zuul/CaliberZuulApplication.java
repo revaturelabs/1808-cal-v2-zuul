@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @EnableZuulProxy
 @CrossOrigin("*")
 public class CaliberZuulApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(CaliberZuulApplication.class, args);
 	}
