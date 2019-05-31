@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableZuulProxy
-@CrossOrigin("*")
+@CrossOrigin(value="*")
 public class CaliberZuulApplication {
 
 	public static void main(String[] args) {
