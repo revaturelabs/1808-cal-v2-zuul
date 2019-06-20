@@ -4,31 +4,27 @@ spring:
 
 zuul:
   routes:
-    user-trainee:
-      path: /**/trainee/**
+    quality-audit:
+      path: /qa/**
+      service-id: quality-audit-service
+    user:
+      path: /user/**
       service-id: user-service
-    user-trainer:
-      path: /**/trainer/**
-      service-id: user-service
-    grade:
-      path: /**/grade/**
-      service-id: assessment-service
-    assessment:
-      path: /**/assessment/**
-      service-id: assessment-service
-    note:
-      path: /**/note/**
-      service-id: assessment-service
     batch:
-      path: /**/batch/**
+      path: /batch/**
       service-id: batch-service
-    category:
-      path: /**/category/**
-      service-id: category-service
+    assessment:
+      path: /assessment/**
+      service-id: assessment-service
     location:
-      path: /**/location/**
-    skill:
-      path: /**/skill/**
+      path: /location/**
+      service-id: location-service
+    category:
+      path: /category/**
+      service-id: category-service
+    skilltype:
+      path: /skill/**
+      service-id: skilltype-service
 eureka:
   client:
     service-url:
