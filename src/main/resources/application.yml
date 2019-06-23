@@ -7,28 +7,35 @@ zuul:
     quality-audit:
       path: /qa/**
       service-id: quality-audit-service
+      strip-prefix: false
     user:
       path: /user/**
       service-id: user-service
+      strip-prefix: false
     batch:
       path: /batch/**
       service-id: batch-service
+      strip-prefix: false
     assessment:
       path: /assessment/**
       service-id: assessment-service
+      strip-prefix: false
     location:
       path: /location/**
       service-id: location-service
+      strip-prefix: false
     category:
       path: /category/**
       service-id: category-service
+      strip-prefix: false
     skilltype:
       path: /skill/**
       service-id: skilltype-service
+      strip-prefix: false
 eureka:
   client:
     service-url:
-      default-zone: http://54.147.136.238:32861/ 
+      default-zone: http://localhost:8761/ 
 
 server:
   port: 10000
