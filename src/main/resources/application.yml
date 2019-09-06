@@ -3,35 +3,41 @@ spring:
     name: zuul
 
 zuul:
+  ignored-services: '*'  # Don't allow access to route by serviceId
+                         # i.e. http://location-service/location/all/location/all wont work
+                         # i.e. http://localhost:10000/location/all/location/all will work
   routes:
-    quality-audit:
+    quality-audit-service:
       path: /qa/**
       service-id: quality-audit-service
       strip-prefix: false
-    user:
+    user-service:
       path: /user/**
       service-id: user-service
       strip-prefix: false
-    batch:
+    batch-service:
       path: /batch/**
       service-id: batch-service
       strip-prefix: false
-    assessment:
+    assessment-service:
       path: /assessment/**
       service-id: assessment-service
       strip-prefix: false
-    location:
+    location-service:
       path: /location/**
       service-id: location-service
       strip-prefix: false
-    category:
+    category-service:
       path: /category/**
       service-id: category-service
       strip-prefix: false
-    skilltype:
+    skilltype-service:
       path: /skill/**
       service-id: skilltype-service
-      strip-prefix: true
+      strip-prefix: false
+  ribbon:
+    eager-load:
+      enabled: true # Don't wait to load route
 eureka:
   client:
     service-url:
@@ -40,8 +46,12 @@ eureka:
 server:
   port: 10000
 
+
+# Increase timeout on reads to be 15000 ms instead of default 2000 ms
+ribbon:
+  ReadTimeout: 15000
 management:
-  endpoints:
+  endpoint:
     web:
       exposure:
         include: '*'
