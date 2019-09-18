@@ -3,6 +3,9 @@ spring:
     name: zuul
 
 zuul:
+  ribbon:
+    eager-load:
+      enabled: true
   routes:
     quality-audit:
       path: /qa/**
