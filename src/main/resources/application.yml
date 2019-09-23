@@ -3,6 +3,9 @@ spring:
     name: zuul
 
 zuul:
+  ribbon:
+    eager-load:
+      enabled: true
   routes:
     quality-audit:
       path: /qa/**
@@ -31,7 +34,7 @@ zuul:
     skilltype:
       path: /skill/**
       service-id: skilltype-service
-      strip-prefix: true
+      strip-prefix: false
 eureka:
   client:
     service-url:
